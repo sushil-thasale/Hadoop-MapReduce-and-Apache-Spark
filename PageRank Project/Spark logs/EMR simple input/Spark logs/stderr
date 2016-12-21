@@ -1,0 +1,71 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/mnt/yarn/usercache/hadoop/filecache/10/__spark_libs__5939707790330629723.zip/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/lib/hadoop/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+16/11/06 01:43:31 INFO SignalUtils: Registered signal handler for TERM
+16/11/06 01:43:31 INFO SignalUtils: Registered signal handler for HUP
+16/11/06 01:43:31 INFO SignalUtils: Registered signal handler for INT
+16/11/06 01:43:32 INFO ApplicationMaster: Preparing Local resources
+16/11/06 01:43:33 INFO ApplicationMaster: Prepared Local resources Map(__spark_libs__ -> resource { scheme: "hdfs" host: "ip-172-31-8-157.us-west-2.compute.internal" port: 8020 file: "/user/hadoop/.sparkStaging/application_1478396476645_0001/__spark_libs__5939707790330629723.zip" } size: 192569850 timestamp: 1478396606954 type: ARCHIVE visibility: PRIVATE, __spark_conf__ -> resource { scheme: "hdfs" host: "ip-172-31-8-157.us-west-2.compute.internal" port: 8020 file: "/user/hadoop/.sparkStaging/application_1478396476645_0001/__spark_conf__.zip" } size: 73757 timestamp: 1478396607643 type: ARCHIVE visibility: PRIVATE)
+16/11/06 01:43:33 INFO ApplicationMaster: ApplicationAttemptId: appattempt_1478396476645_0001_000001
+16/11/06 01:43:33 INFO SecurityManager: Changing view acls to: yarn,hadoop
+16/11/06 01:43:33 INFO SecurityManager: Changing modify acls to: yarn,hadoop
+16/11/06 01:43:33 INFO SecurityManager: Changing view acls groups to: 
+16/11/06 01:43:33 INFO SecurityManager: Changing modify acls groups to: 
+16/11/06 01:43:33 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, hadoop); groups with view permissions: Set(); users  with modify permissions: Set(yarn, hadoop); groups with modify permissions: Set()
+16/11/06 01:43:33 INFO ApplicationMaster: Waiting for Spark driver to be reachable.
+16/11/06 01:43:33 INFO ApplicationMaster: Driver now available: 172.31.8.157:36199
+16/11/06 01:43:33 INFO TransportClientFactory: Successfully created connection to /172.31.8.157:36199 after 98 ms (0 ms spent in bootstraps)
+16/11/06 01:43:33 INFO ApplicationMaster$AMEndpoint: Add WebUI Filter. AddWebUIFilter(org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter,Map(PROXY_HOSTS -> ip-172-31-8-157.us-west-2.compute.internal, PROXY_URI_BASES -> http://ip-172-31-8-157.us-west-2.compute.internal:20888/proxy/application_1478396476645_0001),/proxy/application_1478396476645_0001)
+16/11/06 01:43:33 INFO RMProxy: Connecting to ResourceManager at ip-172-31-8-157.us-west-2.compute.internal/172.31.8.157:8030
+16/11/06 01:43:34 INFO YarnRMClient: Registering the ApplicationMaster
+16/11/06 01:43:34 INFO Utils: Using initial executors = 0, max of spark.dynamicAllocation.initialExecutors, spark.dynamicAllocation.minExecutors and spark.executor.instances
+16/11/06 01:43:34 INFO ApplicationMaster: Started progress reporter thread with (heartbeat : 3000, initial allocation : 200) intervals
+16/11/06 01:43:39 INFO YarnAllocator: Driver requested a total number of 1 executor(s).
+16/11/06 01:43:39 INFO YarnAllocator: Will request 1 executor containers, each with 4 cores and 5632 MB memory including 512 MB overhead
+16/11/06 01:43:39 INFO YarnAllocator: Canceled 0 container requests (locality no longer needed)
+16/11/06 01:43:39 INFO YarnAllocator: Submitted container request (host: *, capability: <memory:5632, vCores:4>)
+16/11/06 01:43:40 INFO AMRMClientImpl: Received new token for : ip-172-31-8-149.us-west-2.compute.internal:8041
+16/11/06 01:43:40 INFO YarnAllocator: Launching container container_1478396476645_0001_01_000002 for on host ip-172-31-8-149.us-west-2.compute.internal
+16/11/06 01:43:40 INFO YarnAllocator: Launching ExecutorRunnable. driverUrl: spark://CoarseGrainedScheduler@172.31.8.157:36199,  executorHostname: ip-172-31-8-149.us-west-2.compute.internal
+16/11/06 01:43:40 INFO YarnAllocator: Received 1 containers from YARN, launching executors on 1 of them.
+16/11/06 01:43:40 INFO ExecutorRunnable: Starting Executor Container
+16/11/06 01:43:40 INFO ContainerManagementProtocolProxy: yarn.client.max-cached-nodemanagers-proxies : 0
+16/11/06 01:43:40 INFO ExecutorRunnable: Setting up ContainerLaunchContext
+16/11/06 01:43:40 INFO ExecutorRunnable: 
+===============================================================================
+YARN executor launch context:
+  env:
+    CLASSPATH -> /usr/lib/hadoop-lzo/lib/*:/usr/lib/hadoop/hadoop-aws.jar:/usr/share/aws/aws-java-sdk/*:/usr/share/aws/emr/emrfs/conf:/usr/share/aws/emr/emrfs/lib/*:/usr/share/aws/emr/emrfs/auxlib/*:/usr/share/aws/emr/security/conf:/usr/share/aws/emr/security/lib/*<CPS>{{PWD}}<CPS>{{PWD}}/__spark_conf__<CPS>{{PWD}}/__spark_libs__/*<CPS>$HADOOP_CONF_DIR<CPS>$HADOOP_COMMON_HOME/*<CPS>$HADOOP_COMMON_HOME/lib/*<CPS>$HADOOP_HDFS_HOME/*<CPS>$HADOOP_HDFS_HOME/lib/*<CPS>$HADOOP_MAPRED_HOME/*<CPS>$HADOOP_MAPRED_HOME/lib/*<CPS>$HADOOP_YARN_HOME/*<CPS>$HADOOP_YARN_HOME/lib/*<CPS>/usr/lib/hadoop-lzo/lib/*<CPS>/usr/share/aws/emr/emrfs/conf<CPS>/usr/share/aws/emr/emrfs/lib/*<CPS>/usr/share/aws/emr/emrfs/auxlib/*<CPS>/usr/share/aws/emr/lib/*<CPS>/usr/share/aws/emr/ddb/lib/emr-ddb-hadoop.jar<CPS>/usr/share/aws/emr/goodies/lib/emr-hadoop-goodies.jar<CPS>/usr/share/aws/emr/kinesis/lib/emr-kinesis-hadoop.jar<CPS>/usr/lib/spark/yarn/lib/datanucleus-api-jdo.jar<CPS>/usr/lib/spark/yarn/lib/datanucleus-core.jar<CPS>/usr/lib/spark/yarn/lib/datanucleus-rdbms.jar<CPS>/usr/share/aws/emr/cloudwatch-sink/lib/*<CPS>$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*<CPS>$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/lib/*<CPS>/usr/lib/hadoop-lzo/lib/*<CPS>/usr/share/aws/emr/emrfs/conf<CPS>/usr/share/aws/emr/emrfs/lib/*<CPS>/usr/share/aws/emr/emrfs/auxlib/*<CPS>/usr/share/aws/emr/lib/*<CPS>/usr/share/aws/emr/ddb/lib/emr-ddb-hadoop.jar<CPS>/usr/share/aws/emr/goodies/lib/emr-hadoop-goodies.jar<CPS>/usr/share/aws/emr/kinesis/lib/emr-kinesis-hadoop.jar<CPS>/usr/share/aws/emr/cloudwatch-sink/lib/*
+    SPARK_LOG_URL_STDERR -> http://ip-172-31-8-149.us-west-2.compute.internal:8042/node/containerlogs/container_1478396476645_0001_01_000002/hadoop/stderr?start=-4096
+    SPARK_YARN_STAGING_DIR -> hdfs://ip-172-31-8-157.us-west-2.compute.internal:8020/user/hadoop/.sparkStaging/application_1478396476645_0001
+    SPARK_USER -> hadoop
+    SPARK_YARN_MODE -> true
+    SPARK_LOG_URL_STDOUT -> http://ip-172-31-8-149.us-west-2.compute.internal:8042/node/containerlogs/container_1478396476645_0001_01_000002/hadoop/stdout?start=-4096
+
+  command:
+    LD_LIBRARY_PATH="/usr/lib/hadoop/lib/native:/usr/lib/hadoop-lzo/lib/native:$LD_LIBRARY_PATH" {{JAVA_HOME}}/bin/java -server -Xmx5120m '-verbose:gc' '-XX:+PrintGCDetails' '-XX:+PrintGCDateStamps' '-XX:+UseConcMarkSweepGC' '-XX:CMSInitiatingOccupancyFraction=70' '-XX:MaxHeapFreeRatio=70' '-XX:+CMSClassUnloadingEnabled' '-XX:OnOutOfMemoryError=kill -9 %p' -Djava.io.tmpdir={{PWD}}/tmp '-Dspark.history.ui.port=18080' '-Dspark.driver.port=36199' -Dspark.yarn.app.container.log.dir=<LOG_DIR> org.apache.spark.executor.CoarseGrainedExecutorBackend --driver-url spark://CoarseGrainedScheduler@172.31.8.157:36199 --executor-id 1 --hostname ip-172-31-8-149.us-west-2.compute.internal --cores 4 --app-id application_1478396476645_0001 --user-class-path file:$PWD/__app__.jar 1> <LOG_DIR>/stdout 2> <LOG_DIR>/stderr
+===============================================================================
+      
+16/11/06 01:43:40 INFO ContainerManagementProtocolProxy: Opening proxy : ip-172-31-8-149.us-west-2.compute.internal:8041
+16/11/06 01:43:43 INFO AMRMClientImpl: Received new token for : ip-172-31-8-150.us-west-2.compute.internal:8041
+16/11/06 01:43:43 INFO YarnAllocator: Received 1 containers from YARN, launching executors on 0 of them.
+16/11/06 01:44:04 INFO YarnAllocator: Driver requested a total number of 0 executor(s).
+16/11/06 01:44:04 INFO YarnAllocator: Canceling requests for 0 executor container(s) to have a new desired total 0 executors.
+16/11/06 01:44:04 WARN YarnAllocator: Expected to find pending requests, but found none.
+16/11/06 01:44:07 INFO YarnAllocator: Canceling requests for 0 executor container(s) to have a new desired total 0 executors.
+16/11/06 01:44:07 WARN YarnAllocator: Expected to find pending requests, but found none.
+16/11/06 01:44:10 INFO YarnAllocator: Canceling requests for 0 executor container(s) to have a new desired total 0 executors.
+16/11/06 01:44:10 WARN YarnAllocator: Expected to find pending requests, but found none.
+16/11/06 01:44:13 INFO YarnAllocator: Canceling requests for 0 executor container(s) to have a new desired total 0 executors.
+16/11/06 01:44:13 WARN YarnAllocator: Expected to find pending requests, but found none.
+16/11/06 01:44:16 INFO YarnAllocator: Canceling requests for 0 executor container(s) to have a new desired total 0 executors.
+16/11/06 01:44:16 WARN YarnAllocator: Expected to find pending requests, but found none.
+16/11/06 01:44:18 INFO ApplicationMaster$AMEndpoint: Driver terminated or disconnected! Shutting down. 172.31.8.157:36199
+16/11/06 01:44:18 INFO ApplicationMaster$AMEndpoint: Driver terminated or disconnected! Shutting down. 172.31.8.157:36199
+16/11/06 01:44:18 INFO ApplicationMaster: Final app status: SUCCEEDED, exitCode: 0
+16/11/06 01:44:18 INFO ApplicationMaster: Unregistering ApplicationMaster with SUCCEEDED
+16/11/06 01:44:18 INFO AMRMClientImpl: Waiting for application to be successfully unregistered.
+16/11/06 01:44:18 INFO ApplicationMaster: Deleting staging directory hdfs://ip-172-31-8-157.us-west-2.compute.internal:8020/user/hadoop/.sparkStaging/application_1478396476645_0001
+16/11/06 01:44:18 INFO ShutdownHookManager: Shutdown hook called

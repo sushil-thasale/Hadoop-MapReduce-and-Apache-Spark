@@ -1,0 +1,63 @@
+import org.apache.spark.SparkContext
+import org.apache.spark.SparkConf
+// code designed inspired Prof. Nattuck matrix multiplication code
+
+object MmulSparse {
+    val on_csv = """\s*,\s*""".r
+
+    def main(args: Array[String]) {
+        val conf = new SparkConf().setAppName("mmul").setMaster("local")
+        val sc   = new SparkContext(conf)
+
+        val textA = sc.textFile("_test/dataA.csv")
+        val textB = sc.textFile("_test/dataB.csv")
+
+        // val textA = sc.textFile("_test_old/dataA_test.csv")
+        // val textB = sc.textFile("_test_old/dataB_test.csv")
+
+        // parsing input and converting to ((row,cloumn),value)
+        val A = textA.map(line => line.split(",")).map (field => ((field(0).trim.toLong , field(1).trim.toLong),  field(2).trim.toDouble))
+        val B = textB.map(line => line.split(",")).map (field => ((field(0).trim.toLong , field(1).trim.toLong),  field(2).trim.toDouble))
+
+        // TODO: calculate C = A * B
+
+        // range for 1000 by 1000 matrix
+        val nrange = (0 : Long) to (999 : Long)
+
+        // emiting all nrange combinations as ((row , nrange , column) , value)
+        val distA = A.flatMap( cell => {
+            val ((ii, kk), vv) = cell
+            nrange.map(jj => ((ii, jj, kk), vv))
+        })
+
+        // emiting all nrange combinations as ((nrange , column , row) , value)
+        val distB = B.flatMap( cell => {
+            val ((kk, jj), vv) = cell
+            nrange.map(ii => ((ii, jj, kk), vv))
+        })
+
+        // joining based on key and multiplying each combo
+        val distC = distA.join(distB).map( cell => {
+            val ((ii, jj, kk), (aa, bb)) = cell
+            ((ii, jj), aa * bb)
+        })
+
+        // adding all the multiplied values
+        val C = distC.reduceByKey((xx, yy) => xx + yy)
+
+        C.map(xs => {
+            val ((ii, jj), vv) = xs
+            ii.toString + ", "+ jj.toString + ", " + vv.toString
+            }).saveAsTextFile("output")
+
+        val sizeA = textA.count
+        val sizeB = textB.count
+        val sizeC = C.count
+        
+        sc.stop()
+
+        println("COUNT A-------->" + sizeA);
+        println("COUNT B-------->" + sizeB);
+        println("COUNT C-------->" + sizeC);
+    }
+}

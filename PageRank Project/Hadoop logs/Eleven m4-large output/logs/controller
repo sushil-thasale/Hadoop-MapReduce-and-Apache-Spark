@@ -1,0 +1,60 @@
+2016-10-23T22:01:12.830Z INFO Ensure step 2 jar file s3://hadoop-assignment3/jars/PageRank.jar
+2016-10-23T22:01:14.769Z INFO StepRunner: Created Runner for step 2
+INFO startExec 'hadoop jar /mnt/var/lib/hadoop/steps/s-1SXQ9PLVSS0ES/PageRank.jar s3://hadoop-assignment3/input/ s3://hadoop-assignment3/bigOutput'
+INFO Environment:
+  PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/sbin:/opt/aws/bin
+  LESS_TERMCAP_md=[01;38;5;208m
+  LESS_TERMCAP_me=[0m
+  HISTCONTROL=ignoredups
+  LESS_TERMCAP_mb=[01;31m
+  AWS_AUTO_SCALING_HOME=/opt/aws/apitools/as
+  UPSTART_JOB=rc
+  LESS_TERMCAP_se=[0m
+  HISTSIZE=1000
+  HADOOP_ROOT_LOGGER=INFO,DRFA
+  JAVA_HOME=/etc/alternatives/jre
+  AWS_DEFAULT_REGION=us-west-2
+  AWS_ELB_HOME=/opt/aws/apitools/elb
+  LESS_TERMCAP_us=[04;38;5;111m
+  EC2_HOME=/opt/aws/apitools/ec2
+  TERM=linux
+  XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt
+  runlevel=3
+  LANG=en_US.UTF-8
+  AWS_CLOUDWATCH_HOME=/opt/aws/apitools/mon
+  MAIL=/var/spool/mail/hadoop
+  LESS_TERMCAP_ue=[0m
+  LOGNAME=hadoop
+  PWD=/
+  LANGSH_SOURCED=1
+  HADOOP_CLIENT_OPTS=-Djava.io.tmpdir=/mnt/var/lib/hadoop/steps/s-1SXQ9PLVSS0ES/tmp
+  _=/etc/alternatives/jre/bin/java
+  CONSOLETYPE=serial
+  RUNLEVEL=3
+  LESSOPEN=||/usr/bin/lesspipe.sh %s
+  previous=N
+  UPSTART_EVENTS=runlevel
+  AWS_PATH=/opt/aws
+  USER=hadoop
+  UPSTART_INSTANCE=
+  PREVLEVEL=N
+  HADOOP_LOGFILE=syslog
+  HOSTNAME=ip-172-31-2-222
+  NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat
+  HADOOP_LOG_DIR=/mnt/var/log/hadoop/steps/s-1SXQ9PLVSS0ES
+  EC2_AMITOOL_HOME=/opt/aws/amitools/ec2
+  SHLVL=5
+  HOME=/home/hadoop
+  HADOOP_IDENT_STRING=hadoop
+INFO redirectOutput to /mnt/var/log/hadoop/steps/s-1SXQ9PLVSS0ES/stdout
+INFO redirectError to /mnt/var/log/hadoop/steps/s-1SXQ9PLVSS0ES/stderr
+INFO Working dir /mnt/var/lib/hadoop/steps/s-1SXQ9PLVSS0ES
+INFO ProcessRunner started child process 7727 :
+hadoop    7727  3045  0 22:01 ?        00:00:00 bash /usr/lib/hadoop/bin/hadoop jar /mnt/var/lib/hadoop/steps/s-1SXQ9PLVSS0ES/PageRank.jar s3://hadoop-assignment3/input/ s3://hadoop-assignment3/bigOutput
+2016-10-23T22:01:16.821Z INFO HadoopJarStepRunner.Runner: startRun() called for s-1SXQ9PLVSS0ES Child Pid: 7727
+INFO Synchronously wait child process to complete : hadoop jar /mnt/var/lib/hadoop/steps/s-1SXQ9PLV...
+INFO Process still running
+INFO waitProcessCompletion ended with exit code 0 : hadoop jar /mnt/var/lib/hadoop/steps/s-1SXQ9PLV...
+INFO total process run time: 1534 seconds
+2016-10-23T22:26:49.297Z INFO Step created jobs: job_1477259797492_0001,job_1477259797492_0002,job_1477259797492_0003,job_1477259797492_0004,job_1477259797492_0005,job_1477259797492_0006,job_1477259797492_0007,job_1477259797492_0008,job_1477259797492_0009,job_1477259797492_0010,job_1477259797492_0011,job_1477259797492_0012,job_1477259797492_0013
+2016-10-23T22:26:49.297Z INFO Step succeeded with exitCode 0 and took 1534 seconds

@@ -1,0 +1,61 @@
+2016-10-23T22:46:50.870Z INFO Ensure step 2 jar file s3://hadoop-assignment3/jars/PageRank.jar
+2016-10-23T22:46:54.051Z INFO StepRunner: Created Runner for step 2
+INFO startExec 'hadoop jar /mnt/var/lib/hadoop/steps/s-2BTAUYI1ORTW6/PageRank.jar s3://hadoop-assignment3/input/ s3://hadoop-assignment3/bigOutput7'
+INFO Environment:
+  PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/sbin:/opt/aws/bin
+  LESS_TERMCAP_md=[01;38;5;208m
+  LESS_TERMCAP_me=[0m
+  HISTCONTROL=ignoredups
+  LESS_TERMCAP_mb=[01;31m
+  AWS_AUTO_SCALING_HOME=/opt/aws/apitools/as
+  UPSTART_JOB=rc
+  LESS_TERMCAP_se=[0m
+  HISTSIZE=1000
+  HADOOP_ROOT_LOGGER=INFO,DRFA
+  JAVA_HOME=/etc/alternatives/jre
+  AWS_DEFAULT_REGION=us-west-2
+  AWS_ELB_HOME=/opt/aws/apitools/elb
+  LESS_TERMCAP_us=[04;38;5;111m
+  EC2_HOME=/opt/aws/apitools/ec2
+  TERM=linux
+  XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt
+  runlevel=3
+  LANG=en_US.UTF-8
+  AWS_CLOUDWATCH_HOME=/opt/aws/apitools/mon
+  MAIL=/var/spool/mail/hadoop
+  LESS_TERMCAP_ue=[0m
+  LOGNAME=hadoop
+  PWD=/
+  LANGSH_SOURCED=1
+  HADOOP_CLIENT_OPTS=-Djava.io.tmpdir=/mnt/var/lib/hadoop/steps/s-2BTAUYI1ORTW6/tmp
+  _=/etc/alternatives/jre/bin/java
+  CONSOLETYPE=serial
+  RUNLEVEL=3
+  LESSOPEN=||/usr/bin/lesspipe.sh %s
+  previous=N
+  UPSTART_EVENTS=runlevel
+  AWS_PATH=/opt/aws
+  USER=hadoop
+  UPSTART_INSTANCE=
+  PREVLEVEL=N
+  HADOOP_LOGFILE=syslog
+  HOSTNAME=ip-172-31-10-88
+  NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat
+  HADOOP_LOG_DIR=/mnt/var/log/hadoop/steps/s-2BTAUYI1ORTW6
+  EC2_AMITOOL_HOME=/opt/aws/amitools/ec2
+  SHLVL=5
+  HOME=/home/hadoop
+  HADOOP_IDENT_STRING=hadoop
+INFO redirectOutput to /mnt/var/log/hadoop/steps/s-2BTAUYI1ORTW6/stdout
+INFO redirectError to /mnt/var/log/hadoop/steps/s-2BTAUYI1ORTW6/stderr
+INFO Working dir /mnt/var/lib/hadoop/steps/s-2BTAUYI1ORTW6
+INFO ProcessRunner started child process 7156 :
+hadoop    7156  3049  1 22:46 ?        00:00:00 /etc/alternatives/jre/bin/java -Xmx1000m -server -XX:OnOutOfMemoryError=kill -9 %p -Dhadoop.log.dir=/mnt/var/log/hadoop/steps/s-2BTAUYI1ORTW6 -Dhadoop.log.file=syslog -Dhadoop.home.dir=/usr/lib/hadoop -Dhadoop.id.str=hadoop -Dhadoop.root.logger=INFO,DRFA -Djava.library.path=:/usr/lib/hadoop-lzo/lib/native:/usr/lib/hadoop/lib/native -Dhadoop.policy.file=hadoop-policy.xml -Djava.net.preferIPv4Stack=true -Djava.io.tmpdir=/mnt/var/lib/hadoop/steps/s-2BTAUYI1ORTW6/tmp -Dhadoop.security.logger=INFO,NullAppender -Dsun.net.inetaddr.ttl=30 org.apache.hadoop.util.RunJar /mnt/var/lib/hadoop/steps/s-2BTAUYI1ORTW6/PageRank.jar s3://hadoop-assignment3/input/ s3://hadoop-assignment3/bigOutput7
+2016-10-23T22:46:56.111Z INFO HadoopJarStepRunner.Runner: startRun() called for s-2BTAUYI1ORTW6 Child Pid: 7156
+INFO Synchronously wait child process to complete : hadoop jar /mnt/var/lib/hadoop/steps/s-2BTAUYI1...
+INFO Process still running
+INFO Process still running
+INFO waitProcessCompletion ended with exit code 0 : hadoop jar /mnt/var/lib/hadoop/steps/s-2BTAUYI1...
+INFO total process run time: 2476 seconds
+2016-10-23T23:28:12.413Z INFO Step created jobs: job_1477262712066_0001,job_1477262712066_0002,job_1477262712066_0003,job_1477262712066_0004,job_1477262712066_0005,job_1477262712066_0006,job_1477262712066_0007,job_1477262712066_0008,job_1477262712066_0009,job_1477262712066_0010,job_1477262712066_0011,job_1477262712066_0012,job_1477262712066_0013
+2016-10-23T23:28:12.414Z INFO Step succeeded with exitCode 0 and took 2476 seconds

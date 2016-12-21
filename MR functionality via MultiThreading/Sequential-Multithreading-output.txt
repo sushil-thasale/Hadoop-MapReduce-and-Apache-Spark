@@ -1,0 +1,53 @@
+Loading 1912.csv in memory...
+
+Loading completed!!!
+
+Time Logs for Sequential : 
+Minimum time : 637
+Maximum time : 863
+Average Time : 684.7
+
+Time Logs for Coarse Lock : 
+Minimum time : 902
+Maximum time : 1079
+Average Time : 1009.8
+
+Time Logs for Fine Lock : 
+Minimum time : 181
+Maximum time : 257
+Average Time : 203.1
+
+Time Logs for No Lock : 
+Minimum time : 166
+Maximum time : 223
+Average Time : 183.3
+
+Time Logs for No Sharing : 
+Minimum time : 196
+Maximum time : 266
+Average Time : 214.4
+
+Time Logs for Sequential with delay : 
+Minimum time : 648
+Maximum time : 890
+Average Time : 691.6
+
+Time Logs for Coarse Lock with delay : 
+Minimum time : 948
+Maximum time : 1111
+Average Time : 1051.9
+
+Time Logs for Fine Lock with delay : 
+Minimum time : 175
+Maximum time : 277
+Average Time : 205.2
+
+Time Logs for No Lock with delay : 
+Minimum time : 169
+Maximum time : 223
+Average Time : 180.8
+
+Time Logs for No Sharing with delay : 
+Minimum time : 185
+Maximum time : 277
+Average Time : 225.3

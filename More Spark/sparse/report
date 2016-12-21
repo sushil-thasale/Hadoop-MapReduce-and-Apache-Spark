@@ -1,0 +1,56 @@
+Analysis :
+max cols in A :999
+max rows in B :999
+Non-zero cells in matrix A : 4574
+Non-zero cells in matrix B : 1000
+dist A count : 4574000
+dist B count : 1000000
+dist C count : 4574
+cell C count : 4574
+Non-zero cells in matrix C : 4574
+======================================================
+// please see source code for step number
+
+step-1
+input records : 4574
+output records : 4574000
+Asymptotic number of times the passed function is called : 
+	flatMap => |A|
+	map => |A|*maxRange (where maxRange = max(max cols in A, max rows in B))
+Asymptotic number of records that need to be communicated between partitions in parallel execution : |A|*maxRange 
+
+
+step-2
+input records : 1000
+output records : 1000000
+Asymptotic number of times the passed function is called : 
+	flatMap => |B|
+	map => |B|*maxRange (where maxRange = max(max cols in A, max rows in B))
+Asymptotic number of records that need to be communicated between partitions in parallel execution : |B|*maxRange 
+
+
+step-3
+input records : 4574000 + 1000000
+output records : 4574
+Asymptotic number of times the passed function is called : 
+	join => |A|*maxRange or |B|*maxRange
+	map => max(|A|, |B|)
+Asymptotic number of records that need to be communicated between partitions in parallel execution : |A|*|B|*maRange^2
+
+
+step-4
+input records : 4574
+output records : 4574
+Asymptotic number of times the passed function is called : 
+	reduceByKey => max(|A|, |B|)
+Asymptotic number of records that need to be communicated between partitions in parallel execution : max(|A|, |B|)
+
+
+step-5
+input records : 4574
+output records : 4574
+Asymptotic number of times the passed function is called : 
+	map => max(|A|, |B|)
+Asymptotic number of records that need to be communicated between partitions in parallel execution : max(|A|, |B|)
+
+
